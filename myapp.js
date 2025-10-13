@@ -61,3 +61,63 @@ console.log(car.make);
 
 
 array.splice //splice command for adding and deleting udemy javascript essentials chapter 18
+
+
+
+//callable objects, object inside object
+function name ( fullname )
+{
+
+  return fullname.lastname + "MR.";
+}
+
+name( {firstname:"Lawrence", lastname:"Turton"} );  
+
+console.log(name( {firstname:"Lawrence", lastname:"Turton"} )
+);
+
+
+console.log(myName, printName());
+
+var myName = "Lawrence";
+
+function printName() {
+  return "John Doe";
+}
+
+//console.log (this);
+
+var object = {
+  prop: this,
+  method: function() { return this; }
+};
+
+var array = [ 
+  this,
+  function() {return this; }
+];
+
+function global () { 
+  return this;
+}
+
+global.call (object);
+
+
+//constructor functions
+
+function Apple ( x, y, color, shape )
+{
+
+  this.x = x;
+  this.y = y;
+  this.color = color;
+  this.shape = shape;
+
+}
+
+// new Apple(10, 20, "red", 200 ); //new so that it doesnt direct to window
+
+var apple1 = new Apple(10, 20, "red", 200 );
+var apple2 = new Apple(20, 100, "green", 300 );  
+var apple3 = new Apple(20, 200, "pink", 10);
