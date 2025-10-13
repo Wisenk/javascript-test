@@ -121,3 +121,30 @@ function Apple ( x, y, color, shape )
 var apple1 = new Apple(10, 20, "red", 200 );
 var apple2 = new Apple(20, 100, "green", 300 );  
 var apple3 = new Apple(20, 200, "pink", 10);
+
+
+//prototypes
+
+function Apple (color, weight)
+{
+  this.color = color;
+  this.weight = weight;
+}
+
+Apple.prototype = {
+  eat: function() { return "eat the apple";},
+  throw: function() { return "throw the apple"; }
+};
+
+var apple1 = new Apple ("red", 200);
+var apple2 = new Apple ("green", 300);
+var apple3 = new Apple ("pink", 100);
+
+Apple.prototype.eat = function() { return "new apple eaten!!!!"}; //to change the prototype method
+
+
+//comparison operators
+== //equal
+=== //strictly equal
+!= //not equal
+!== //strictly not equal
