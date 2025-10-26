@@ -152,7 +152,7 @@ if (greenMan === "yes")
     console.log ('cross the road');
   }
 
-  else if (carsLeft === 0)
+  else if (greenMan = "yes" && (carsLeft === 0 || carsRight === 0) ) // || means or, && means and
   {
     console.log ('All clear! Cross the road');
   }
@@ -161,4 +161,5 @@ if (greenMan === "yes")
   {
     console.log ('Stay where you are!');
   }
-  
+
+
