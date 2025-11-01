@@ -164,4 +164,16 @@ if (greenMan === "yes")
 
   
 
-console.dir ( document.getElementById('hello') );
+var pHello = document.getElementById('hello');
+
+pHello.innerText = "new world";
+pHello.innerHTML += " order <span> hello world </span> ";
+
+var el = document.getElementById ('style');
+
+/*el.style.background = "blue";
+el.style.color = "white";
+el.style.width = "200px";*/
+
+
+el.style.cssText = "background: blue; color: white; width: 200px";
